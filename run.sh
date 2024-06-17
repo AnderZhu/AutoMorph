@@ -31,21 +31,21 @@ sh test_outside.sh
 cd ../M2_lwnet_disc_cup
 sh test_outside.sh
 
-# STEP 4 METRIC MEASUREMENT
-echo "### Feature measuring ###"
+# # STEP 4 METRIC MEASUREMENT
+# echo "### Feature measuring ###"
 
-cd ../M3_feature_zone/retipy/
-python create_datasets_disc_centred_B.py
-python create_datasets_disc_centred_C.py
-python create_datasets_macular_centred_B.py
-python create_datasets_macular_centred_C.py
+# cd ../M3_feature_zone/retipy/
+# python create_datasets_disc_centred_B.py
+# python create_datasets_disc_centred_C.py
+# python create_datasets_macular_centred_B.py
+# python create_datasets_macular_centred_C.py
 
-cd ../../M3_feature_whole_pic/retipy/
-python create_datasets_macular_centred.py
-python create_datasets_disc_centred.py
+# cd ../../M3_feature_whole_pic/retipy/
+# python create_datasets_macular_centred.py
+# python create_datasets_disc_centred.py
 
-cd ../../
-python csv_merge.py
+# cd ../../
+# python csv_merge.py
 
 echo "### Done ###"
 
