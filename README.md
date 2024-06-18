@@ -1,4 +1,4 @@
-This is a modified version of AutoMorph with a modified Colab:
+This is a modified version of AutoMorph that runs with this colab file:
 
 https://colab.research.google.com/drive/1eaBiTT1SCFWAotcKceDMt6zsJF4YNLZS?authuser=1#scrollTo=eS842kL0LjWv
 
