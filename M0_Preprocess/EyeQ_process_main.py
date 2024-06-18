@@ -14,7 +14,7 @@ def process(image_list, save_path):
     list_resolution = []
     scale_resolution = []
     
-    resolution_list = pd.read_csv('../resolution_information.csv')
+    # resolution_list = pd.read_csv('../resolution_information.csv')
     
     for image_path in image_list:
         
@@ -23,7 +23,7 @@ def process(image_list, save_path):
             print('continue...')
             continue
         try:
-            resolution_ = resolution_list['res'][resolution_list['fundus']==image_path].values[0]
+            resolution_ = 1 # resolution_list['res'][resolution_list['fundus']==image_path].values[0]
             list_resolution.append(resolution_)
             img = prep.imread(dst_image)
             r_img, borders, mask, r_img, radius_list,centre_list_w, centre_list_h = prep.process_without_gb(img,img,radius_list,centre_list_w, centre_list_h)
@@ -48,9 +48,4 @@ if __name__ == "__main__":
         os.makedirs(save_path)
 
     process(image_list, save_path)
-
-        
-
-
-
-
+    
