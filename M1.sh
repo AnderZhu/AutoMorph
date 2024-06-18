@@ -2,7 +2,7 @@
 
 echo "### Image Quality Assessment ###"
 
-cd ../M1_Retinal_Image_quality_EyePACS
+cd ./M1_Retinal_Image_quality_EyePACS
 sh test_outside.sh
 
 python merge_quality_assessment.py
