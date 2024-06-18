@@ -8,8 +8,8 @@ result_Eyepacs = './test_outside/results_ensemble.csv'
 
 if not os.path.exists('../Results/M1/Good_quality/'):
     os.makedirs('../Results/M1/Good_quality/')
-if not os.path.exists('../Results/M1/Bad_quality/'):
-    os.makedirs('../Results/M1/Bad_quality/')
+# if not os.path.exists('../Results/M1/Bad_quality/'):
+#     os.makedirs('../Results/M1/Bad_quality/')
 
 result_Eyepacs_ = pd.read_csv(result_Eyepacs)
 
@@ -32,7 +32,7 @@ for i in range(len(name_list)):
         shutil.copy(name_list[i], '../Results/M1/Good_quality/')        
     else:
         Eye_bad+=1        
-        shutil.copy(name_list[i], '../Results/M1/Bad_quality/')
+        # shutil.copy(name_list[i], '../Results/M1/Bad_quality/')
         #shutil.copy(name_list[i], '../Results/M1/Good_quality/')
 
 
