@@ -1,3 +1,9 @@
+This is a modified version of AutoMorph with a modified Colab:
+
+https://colab.research.google.com/drive/1eaBiTT1SCFWAotcKceDMt6zsJF4YNLZS?authuser=1#scrollTo=eS842kL0LjWv
+
+See the original Readme below:
+
 # AutoMorph 2022 👀
 --Code for [AutoMorph: Automated Retinal Vascular Morphology Quantification via a Deep Learning Pipeline](https://tvst.arvojournals.org/article.aspx?articleid=2783477).
 
