@@ -1,7 +1,7 @@
 # STEP 3 OPTIC DISC & VESSEL & ARTERY/VEIN SEG
 echo "### Segmentation Modules ###"
 
-cd ../M2_Vessel_seg
+cd M2_Vessel_seg
 sh test_outside.sh
 
 cd ../M2_Artery_vein
