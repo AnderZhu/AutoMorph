@@ -20,6 +20,8 @@ from torch.utils.data import DataLoader
 from model import Resnet101_fl, InceptionV3_fl, Densenet161_fl, Resnext101_32x8d_fl, MobilenetV2_fl, Vgg16_bn_fl, Efficientnet_fl
 
 
+PATH = '/content/drive/My Drive/RFI-80GB/'
+
 font = {
         'weight' : 'normal',
         'size'   : 18}
@@ -147,9 +149,9 @@ def test_net(model_fl_1,
         
     Data4stage2 = pd.DataFrame({'Name':filename_list, 'softmax_good':np.array(prediction_list_mean)[:,0],'softmax_usable':np.array(prediction_list_mean)[:,1],'softmax_bad':np.array(prediction_list_mean)[:,2], 'good_sd':np.array(prediction_list_std)[:,0],'usable_sd':np.array(prediction_list_std)[:,1],'bad_sd':np.array(prediction_list_std)[:,2], 'Prediction': prediction_decode_list})
     Data4stage2.to_csv('./test_outside/results_ensemble.csv', index = None, encoding='utf8')
-    if not os.path.exists('../Results/M1'):
-        os.makedirs('../Results/M1')
-    Data4stage2.to_csv('../Results/M1/results_ensemble.csv', index = None, encoding='utf8')
+    if not os.path.exists(os.path.join(PATH, '/Results/M1')):
+        os.makedirs(os.path.join(PATH, '/Results/M1'))
+    Data4stage2.to_csv(os.path.join(PATH, '/Results/M1/results_ensemble.csv'), index = None, encoding='utf8')
 
 
 
