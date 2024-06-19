@@ -76,5 +76,5 @@ if __name__ == "__main__":
     if not os.path.exists(save_path):
         os.makedirs(save_path)
 
-    process(train_list, tset_list, save_path)
+    process(train_list, test_list, save_path)
     
