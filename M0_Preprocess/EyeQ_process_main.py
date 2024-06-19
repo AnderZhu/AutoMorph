@@ -7,7 +7,7 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 PATH = '/content/drive/My Drive/RFI-80GB/'
 
-def process(train_list, test_list, save_path):
+def process(train_list, save_path):
     
     radius_list = []
     centre_list_w = []
@@ -69,12 +69,11 @@ if __name__ == "__main__":
     assert(os.path.exists(PATH))
     
     train_list = sorted(os.listdir(os.path.join(PATH, 'test_train')))
-    test_list = sorted(os.listdir('/content/drive/My Drive/RFI-80GB/test'))
     
     save_path = os.path.join(PATH, 'Results/M0/images/')
     
     if not os.path.exists(save_path):
         os.makedirs(save_path)
 
-    process(train_list, test_list, save_path)
+    process(train_list, save_path)
     
