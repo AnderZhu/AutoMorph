@@ -26,16 +26,16 @@ for i in range(len(name_list)):
     
     if Eyepacs_pre[i]==0:
         Eye_good+=1
-        shutil.copy(name_list[i], os.path.join(PATH, 'Results/M1/Good_quality/'))
+        # shutil.copy(name_list[i], os.path.join(PATH, 'Results/M1/Good_quality/'))
     elif (Eyepacs_pre[i]==1) and (Eyepacs_bad_mean[i]<0.25):
     #elif (Eyepacs_pre[i]==1) and (Eyepacs_bad_mean[i]<0.25) and (Eyepacs_usable_sd[i]<0.1):
         Eye_good+=1
-        shutil.copy(name_list[i], os.path.join(PATH, 'Results/M1/Good_quality/'))        
+        # shutil.copy(name_list[i], os.path.join(PATH, 'Results/M1/Good_quality/'))        
     else:
         Eye_bad+=1        
         # shutil.copy(name_list[i], '../Results/M1/Bad_quality/')
-        #shutil.copy(name_list[i], '../Results/M1/Good_quality/')
-
+        if os.path.exists(name_list[i]):
+            os.remove(name_list[i])  # Delete the bad quality image
 
 print('Gradable cases by EyePACS_QA is {} '.format(Eye_good))
 print('Ungradable cases by EyePACS_QA is {} '.format(Eye_bad))
