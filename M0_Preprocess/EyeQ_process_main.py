@@ -20,7 +20,7 @@ def process(train_list, save_path):
     
     for image_path in train_list:
         
-        dst_image = os.path.join(PATH, 'test_train', image_path)
+        dst_image = os.path.join(PATH, 'train', image_path)
         if os.path.exists(os.path.join(save_path, image_path)):
             print('continue...')
             continue
@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     assert(os.path.exists(PATH))
     
-    train_list = sorted(os.listdir(os.path.join(PATH, 'test_train')))
+    train_list = sorted(os.listdir(os.path.join(PATH, 'train')))
     
     save_path = os.path.join(PATH, 'Results/M0/images/')
     
