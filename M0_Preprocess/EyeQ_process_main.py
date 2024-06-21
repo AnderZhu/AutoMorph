@@ -22,7 +22,7 @@ def process(train_list, save_path):
         
         dst_image = os.path.join(PATH, 'train', image_path)
         if os.path.exists(save_path + image_path.split('.')[0] + '.png')):
-            print('continue...')
+            # print('continue...')
             continue
         try:
             # resolution_ = 1 # resolution_list['res'][resolution_list['fundus']==image_path].values[0]
