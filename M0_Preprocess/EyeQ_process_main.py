@@ -21,7 +21,7 @@ def process(train_list, save_path):
     for image_path in train_list:
         
         dst_image = os.path.join(PATH, 'train', image_path)
-        if os.path.exists(os.path.join(save_path, image_path)):
+        if os.path.exists(save_path + image_path.split('.')[0] + '.png')):
             print('continue...')
             continue
         try:
