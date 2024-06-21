@@ -33,7 +33,7 @@ def process(train_list, save_path):
             # name_list.append(image_path.split('.')[0] + '.png')
         
         except Exception as e:
-            print(e)
+            print(image_path, e)
             continue
 
     # for image_path in test_list:
