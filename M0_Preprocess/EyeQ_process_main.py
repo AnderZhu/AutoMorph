@@ -34,8 +34,7 @@ def process(train_list, save_path):
         
         except Exception as e:
             print(e)
-            exit(1)
-            pass
+            continue
 
     # for image_path in test_list:
         
